@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WELCOME TO KHUSHI SE PADHAI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f2f2f2;
+        }
+        .button-container {
+            margin: 20px;
+        }
+        .button {
+            padding: 15px 30px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 10px;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+        .content {
+            margin: 30px;
+            text-align: left;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px auto;
+            border-radius: 10px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>WELCOME TO KHUSHI SE PADHAI</h1>
+
+    <div class="button-container">
+        <button class="button" onclick="showContent('thoughts')">Thoughts</button>
+        <button class="button" onclick="showContent('mathematicians')">Genius Mathematicians</button>
+        <button class="button" onclick="showContent('scientists')">Genius Scientists</button>
+    </div>
+
+    <div id="content" class="content"></div>
+
+    <script>
+        function showContent(section) {
+            let content = "";
+            if (section === 'thoughts') {
+                content = `<h2>Inspirational Thoughts</h2>
+                           <ul>
+                               <li>"Success is not the key to happiness. Happiness is the key to success." - Albert Schweitzer</li>
+                               <li>"The only way to do great work is to love what you do." - Steve Jobs</li>
+                               <li>"Believe in yourself and all that you are." - Christian D. Larson</li>
+                               <li>"Hardships often prepare ordinary people for an extraordinary destiny." - C.S. Lewis</li>
+                               <li>"Opportunities don't happen, you create them." - Chris Grosser</li>
+                               <li>"The best way to predict the future is to create it." - Peter Drucker</li>
+                               <li>"Don't watch the clock; do what it does. Keep going." - Sam Levenson</li>
+                               <li>"The road to success is always under construction." - Lily Tomlin</li>
+                               <li>"If you want to lift yourself up, lift up someone else." - Booker T. Washington</li>
+                               <li>"Dream big and dare to fail." - Norman Vaughan</li>
+                           </ul>`;
+            } else if (section === 'mathematicians') {
+                content = `<h2>Genius Mathematicians</h2>
+                           <ul>
+                               <li>Pythagoras - Founder of the Pythagorean Theorem</li>
+                               <li>Euclid - Father of Geometry</li>
+                               <li>Archimedes - Discovered principles of levers and buoyancy</li>
+                               <li>Leonhard Euler - Made discoveries in calculus and graph theory</li>
+                               <li>Carl Gauss - Contributed to number theory</li>
+                               <li>Srinivasa Ramanujan - Self-taught mathematical genius</li>
+                               <li>Alan Turing - Father of modern computing</li>
+                               <li>René Descartes - Cartesian coordinate system</li>
+                               <li>Isaac Newton - Developed calculus</li>
+                               <li>John von Neumann - Game theory pioneer</li>
+                           </ul>
+                           <img src="mathematician.jpg" alt="Mathematicians">`;
+            } else if (section === 'scientists') {
+                content = `<h2>Genius Scientists</h2>
+                           <ul>
+                               <li>Albert Einstein - Theory of Relativity</li>
+                               <li>Isaac Newton - Laws of Motion</li>
+                               <li>Marie Curie - Discovered radioactivity</li>
+                               <li>Galileo Galilei - Father of modern astronomy</li>
+                               <li>Nikola Tesla - Inventor of AC electricity</li>
+                               <li>Stephen Hawking - Black hole theory</li>
+                               <li>Charles Darwin - Theory of Evolution</li>
+                               <li>Louis Pasteur - Germ theory and vaccines</li>
+                               <li>Michael Faraday - Electromagnetism</li>
+                               <li>Richard Feynman - Quantum mechanics</li>
+                           </ul>
+                           <img src="scientist.jpg" alt="Scientists">`;
+            }
+            document.getElementById('content').innerHTML = content;
+        }
+    </script>
+
+</body>
+</html>
